@@ -41,7 +41,8 @@ machine.os*:windows 10 // les champs commençant par 'machine.os' contiennent so
 ### Ajouts nestedfields
 
 KQL permet de chercher à travers les nested fields (un type de liste d'objets : équivalent en écriture à une liste de dictionnaires avec les même clefs) : exemple : mettons que `items` soit un nested fields :
-````kql
+
+```kql
 items:{ name:banana and stock > 10 } // items ayant pour nom bana et un stock > 10
 items:{ name:banana } and items:{ stock:9 } // items au nom banana et items ayant un sock de 9
 ```
@@ -58,6 +59,7 @@ Lucene sert donc principalement pour les regex et pour le fuzzing.
 banana // recherche de banana dans tous les champs
 status:200 // recherche dans un field particulier
 ```
+
 ````lucene
 title:brown // title contient brown
 title : "brown" 
