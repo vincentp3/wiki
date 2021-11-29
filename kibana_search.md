@@ -1,8 +1,10 @@
 # Comment chercher dans Kibana ?
 
-Deux langagges sont disponibles : Kibana Query Language et Lucene.
+Deux langagges sont disponibles : Kibana Query Language et Lucene (cad Apache Lucene utilisé en général dans ELK).
 KQL est utilisé pour la rechercher dans les champs `nested` et les champs `scripted`.
 Lucene permet de faire des recherches regex et fuzzing (ce que ne fait pas KQL).
+
+Il existe également les Query DSL.
 
 ## Kibana Query Language
 
@@ -114,3 +116,16 @@ status:[400 TO 499] AND NOT (extension:php OR extension:html)
 search:fox^2 brown // le terme cherché fox est deux fois plus important que brown (ordre des résultats)
 search: +malware threat open -telegram // je veux tous les champs rehcerche contenant malware obligatoirement avec optionellement threat ou open et sans telegram.
 ```
+
+## Query DSL
+
+[Source](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html)
+
+### Script queries
+
+[Source](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-script-query.html)
+
+### Regexp queries
+
+[Source](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-regexp-query.html)
+
