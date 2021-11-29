@@ -4,7 +4,7 @@ Deux langagges sont disponibles : Kibana Query Language et Lucene (cad Apache Lu
 KQL est utilisé pour la rechercher dans les champs `nested` et les champs `scripted`.
 Lucene permet de faire des recherches regex et fuzzing (ce que ne fait pas KQL).
 
-Il existe également les Query DSL.
+Il existe également les Query DSL, qui permettent d'aller tapper directement sur l'API ELK.
 
 ## Kibana Query Language
 
