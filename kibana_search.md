@@ -55,18 +55,18 @@ Lucene sert donc principalement pour les regex et pour le fuzzing.
 
 ### Recherches basiques
 
-````lucene
+```lucene
 banana // recherche de banana dans tous les champs
 status:200 // recherche dans un field particulier
 ```
 
-````lucene
+```lucene
 title:brown // title contient brown
 title : "brown" 
 first\ name:"Alice" // first name strictement égal à brown (escape de l'espace !)
 ```
 
-````lucene
+```lucene
 book.\*:cyber // les champs du type book.* (book.title, book.source...etc) contenant cyber
 sample_?:cyber //les champs du type sample_0, sample_a ...etc xontenant cyber
 _exists_:title // où title n'a pas d evaleur nulle.
@@ -94,7 +94,7 @@ type:"bad operation"~ // matche operation bad, bad operation, very bad operation
 
 ### Les intervalles
 
-````lucene
+```lucene
 status:[400 TO 499] // recherche un range sur un field
 status:[400 TO *] // range ouvert
 status:[400 TO 500} // 400 à 500 exclu
@@ -104,13 +104,13 @@ status:[400 TO 500} // 400 à 500 exclu
 ### AND, OR, NOT
 
 
-````lucene
+```lucene
 status:[400 TO 499] AND NOT (extension:php OR extension:html)
 ```
 
 ### Ajouts
 
-````lucene
+```lucene
 search:fox^2 brown // le terme cherché fox est deux fois plus important que brown (ordre des résultats)
 search: +malware threat open -telegram // je veux tous les champs rehcerche contenant malware obligatoirement avec optionellement threat ou open et sans telegram.
 ```
